@@ -18,7 +18,7 @@ export const profileData: ProfileData = {
   name: "Sabari Narayanan D",
   title: "Full-Stack Developer & Computer Science Engineer",
   tagline: "Building scalable web platforms, resilient distributed systems, and intelligent digital products.",
-  bio: "Final-year B.E. Computer Science and Engineering student at V.S.B College of Engineering Technical Campus (CGPA: 8.02/10). Passionate full-stack software engineer with hands-on proficiency in Java, Python, React.js, Node.js, Spring Boot, and Cloud Computing. Proven track record in developing enterprise-grade healthcare management tools, finance trackers, and hackathon-winning architectures.",
+  bio: "Final-year B.E. CSE student skilled in Java, Python, and full-stack development. Built an Expense Tracker (JavaFX, Spring Boot, MySQL) and Med Health, a hospital management website (React.js, Node.js, Express.js, MongoDB). Certified in SQL, Java, Big Data, and Cloud Computing. Participated in Smart India Hackathon 2025.",
   avatar: sabariHeroPortrait,
   location: "Coimbatore, Tamil Nadu, India",
   phone: "+91-9952887360",
@@ -151,7 +151,6 @@ export const skillCategories: SkillCategory[] = [
     description: "Core programming languages for application and backend engineering",
     skills: [
       { name: "Java", level: 92, iconName: "Coffee", category: "Languages", highlight: true },
-      { name: "Python", level: 85, iconName: "FileCode2", category: "Languages", highlight: true },
       { name: "JavaScript (ES6+)", level: 88, iconName: "Code", category: "Languages", highlight: true },
       { name: "SQL", level: 90, iconName: "Database", category: "Languages", highlight: true },
       { name: "HTML5 / CSS3", level: 95, iconName: "Layout", category: "Languages" }
@@ -310,12 +309,12 @@ export const certificationsList: CertificationItem[] = [
 export const achievementsList: AchievementItem[] = [
   {
     id: "sih-2025",
-    title: "Smart India Hackathon (SIH) 2025 Internal",
+    title: "SIH 2025 Internal Hackathon",
     event: "SIH Internal College Hackathon",
-    rank: "Active Hackathon Participant",
-    description: "Designed and engineered 'SAFETY VOYAGE'—a smart transit and commuter safety project system featuring real-time geofence tracking and automated SOS alerts.",
+    rank: "Ranked Top 5 / 15 Teams",
+    description: "Ranked top 5 out of 15 teams for the SAFETY VOYAGE Smart Travel Project System in College level.",
     date: "2025",
-    highlightText: "SIH 2025 Participant",
+    highlightText: "Top 5 of 15 Teams",
     stats: "Smart India Hackathon",
     tags: ["Hackathon", "IoT & Python", "Rapid Prototyping", "Team Presentation"]
   },

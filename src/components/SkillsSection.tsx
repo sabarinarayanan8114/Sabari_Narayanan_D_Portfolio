@@ -42,7 +42,7 @@ export const circularSkillsData: CircularSkill[] = [
     experience: "3+ Years",
     projectsCount: 5,
     description: "HackerRank certified. OOP principles, Collections Framework, Multithreading & Exception handling.",
-    initialXRatio: 0.12,
+    initialXRatio: 0.14,
     initialYRatio: 0.22
   },
   {
@@ -57,22 +57,7 @@ export const circularSkillsData: CircularSkill[] = [
     experience: "2+ Years",
     projectsCount: 3,
     description: "RESTful micro-endpoints, dependency injection, service layers & MySQL ORM integration.",
-    initialXRatio: 0.29,
-    initialYRatio: 0.22
-  },
-  {
-    id: "python",
-    name: "Python",
-    categoryTag: "LANGUAGE",
-    filterCategory: "languages",
-    color: "#38bdf8",
-    secondaryColor: "#0284c7",
-    radius: 80,
-    level: 85,
-    experience: "2+ Years",
-    projectsCount: 3,
-    description: "Python scripting, SIH 2025 Safety Voyage backend, telemetry ingestion & algorithms.",
-    initialXRatio: 0.46,
+    initialXRatio: 0.32,
     initialYRatio: 0.22
   },
   {
@@ -87,7 +72,7 @@ export const circularSkillsData: CircularSkill[] = [
     experience: "2+ Years",
     projectsCount: 4,
     description: "Responsive component architecture, state hooks, interactive SPAs & dynamic dashboards.",
-    initialXRatio: 0.63,
+    initialXRatio: 0.52,
     initialYRatio: 0.22
   },
   {
@@ -102,7 +87,7 @@ export const circularSkillsData: CircularSkill[] = [
     experience: "2+ Years",
     projectsCount: 4,
     description: "Asynchronous I/O, Express routing, JWT authentication pipelines & full-stack MERN services.",
-    initialXRatio: 0.80,
+    initialXRatio: 0.72,
     initialYRatio: 0.22
   },
   {
@@ -117,7 +102,7 @@ export const circularSkillsData: CircularSkill[] = [
     experience: "3+ Years",
     projectsCount: 4,
     description: "Relational schema modeling, indexing, complex JOIN queries, ACID compliance & transactions.",
-    initialXRatio: 0.94,
+    initialXRatio: 0.90,
     initialYRatio: 0.22
   },
 

@@ -48,7 +48,6 @@ const orbitingSkills = [
   { name: 'Java (Core & OOP)', short: 'Java', icon: Coffee, color: 'text-orange-400', glow: 'hover:shadow-orange-500/30', border: 'hover:border-orange-500/60', bg: 'bg-orange-950/40' },
   { name: 'Spring Boot', short: 'Spring', icon: Leaf, color: 'text-emerald-400', glow: 'hover:shadow-emerald-500/30', border: 'hover:border-emerald-500/60', bg: 'bg-emerald-950/40' },
   { name: 'React.js', short: 'React', icon: Layers, color: 'text-cyan-400', glow: 'hover:shadow-cyan-500/30', border: 'hover:border-cyan-500/60', bg: 'bg-cyan-950/40' },
-  { name: 'Python', short: 'Python', icon: Terminal, color: 'text-sky-400', glow: 'hover:shadow-sky-500/30', border: 'hover:border-sky-500/60', bg: 'bg-sky-950/40' },
   { name: 'Node.js & Express', short: 'Node.js', icon: Server, color: 'text-green-400', glow: 'hover:shadow-green-500/30', border: 'hover:border-green-500/60', bg: 'bg-green-950/40' },
   { name: 'MySQL / SQL', short: 'MySQL', icon: Database, color: 'text-blue-400', glow: 'hover:shadow-blue-500/30', border: 'hover:border-blue-500/60', bg: 'bg-blue-950/40' },
   { name: 'Cloud Computing', short: 'Cloud', icon: Cloud, color: 'text-amber-400', glow: 'hover:shadow-amber-500/30', border: 'hover:border-amber-500/60', bg: 'bg-amber-950/40' },

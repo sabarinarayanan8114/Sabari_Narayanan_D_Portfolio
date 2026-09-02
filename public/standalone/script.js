@@ -4,7 +4,7 @@
  */
 
 // Default Google Apps Script Web App URL (replace with your deployed URL from Google Sheets)
-let GOOGLE_APPS_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbz_sample_webhook/exec";
+let GOOGLE_APPS_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbxbFC34GBOlaujqXLBulcMHoLTwKBxYpYP5CbNl1GG3v6UnFkKeayv45Y7Va-7ATDeLRg/exec";
 
 document.addEventListener('DOMContentLoaded', () => {
   initNavbar();

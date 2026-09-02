@@ -15,17 +15,25 @@ import {
   Database,
   Server,
   FileCode,
-  ShieldCheck
+  ShieldCheck,
+  FileSpreadsheet,
+  ExternalLink
 } from 'lucide-react';
 import confetti from 'canvas-confetti';
 import { profileData } from '../data/portfolioData';
+import { googleSheetsDb } from '../services/googleSheetsService';
 
 interface ContactSectionProps {
   onShowToast: (msg: string) => void;
   onStandaloneClick?: () => void;
+  onOpenGoogleSheetsDb?: () => void;
 }
 
-export const ContactSection: React.FC<ContactSectionProps> = ({ onShowToast, onStandaloneClick }) => {
+export const ContactSection: React.FC<ContactSectionProps> = ({ 
+  onShowToast, 
+  onStandaloneClick,
+  onOpenGoogleSheetsDb 
+}) => {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -36,7 +44,7 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ onShowToast, onS
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [copiedEmail, setCopiedEmail] = useState(false);
   const [copiedPhone, setCopiedPhone] = useState(false);
-  const [customGasUrl, setCustomGasUrl] = useState('');
+  const [customGasUrl, setCustomGasUrl] = useState('https://script.google.com/macros/s/AKfycbxbFC34GBOlaujqXLBulcMHoLTwKBxYpYP5CbNl1GG3v6UnFkKeayv45Y7Va-7ATDeLRg/exec');
   const [showConfigDrawer, setShowConfigDrawer] = useState(false);
 
   const quickSubjects = [
@@ -68,39 +76,50 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ onShowToast, onS
 
     setIsSubmitting(true);
 
-    const defaultGasUrl = customGasUrl.trim().startsWith('http')
-      ? customGasUrl.trim()
-      : 'https://script.google.com/macros/s/AKfycbz_sample_webhook/exec';
-
     try {
-      // POST to Google Apps Script Web App
+      // 1. Direct Google Sheets REST API & Local persistence
+      await googleSheetsDb.appendSubmission({
+        timestamp: new Date().toLocaleString(),
+        name: formData.name.trim(),
+        email: formData.email.trim(),
+        subject: formData.subject,
+        message: formData.message.trim(),
+        status: 'NEW'
+      });
+
+      // 2. Fallback / supplementary Google Apps Script Webhook
+      const targetGasUrl = customGasUrl.trim().startsWith('http')
+        ? customGasUrl.trim()
+        : 'https://script.google.com/macros/s/AKfycbxbFC34GBOlaujqXLBulcMHoLTwKBxYpYP5CbNl1GG3v6UnFkKeayv45Y7Va-7ATDeLRg/exec';
+
       const formPayload = new URLSearchParams();
       formPayload.append('name', formData.name);
       formPayload.append('email', formData.email);
       formPayload.append('subject', formData.subject);
       formPayload.append('message', formData.message);
 
-      await fetch(defaultGasUrl, {
+      await fetch(targetGasUrl, {
         method: 'POST',
         mode: 'no-cors',
         headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
         body: formPayload.toString()
-      });
+      }).catch((fetchErr) => console.log('Apps Script webhook response:', fetchErr));
+
     } catch (err) {
-      console.log('Google Apps Script log:', err);
+      console.log('Submission handling log:', err);
+    } finally {
+      setIsSubmitting(false);
+      setSubmitted(true);
+      onShowToast('✅ Message saved to Google Sheets database & forwarded to Sabari!');
+
+      // Trigger celebratory confetti
+      confetti({
+        particleCount: 90,
+        spread: 75,
+        origin: { y: 0.75 },
+        colors: ['#38bdf8', '#818cf8', '#34d399', '#fbbf24']
+      });
     }
-
-    setIsSubmitting(false);
-    setSubmitted(true);
-    onShowToast('✅ Message saved to Google Sheets database & forwarded to Sabari!');
-
-    // Trigger celebratory confetti
-    confetti({
-      particleCount: 85,
-      spread: 70,
-      origin: { y: 0.75 },
-      colors: ['#38bdf8', '#818cf8', '#34d399', '#fbbf24']
-    });
   };
 
   return (
@@ -236,28 +255,41 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ onShowToast, onS
               </div>
 
               {/* Google Sheets Database Integration Box */}
-              <div className="p-4 rounded-xl bg-emerald-950/30 border border-emerald-800/40 space-y-2">
+              <div className="p-4 rounded-xl bg-emerald-950/30 border border-emerald-800/40 space-y-3">
                 <div className="flex items-center justify-between">
                   <div className="flex items-center gap-2 text-emerald-400 font-mono text-xs font-bold">
                     <Database className="w-4 h-4" />
                     <span>Google Sheets Database Active</span>
                   </div>
                   <span className="px-2 py-0.5 rounded-full bg-emerald-900/80 text-emerald-300 text-[10px] font-mono border border-emerald-600/40">
-                    Live Webhook
+                    Live REST API
                   </span>
                 </div>
                 <p className="text-[11px] text-slate-400 leading-relaxed">
-                  Submissions are dynamically inserted into a Google Sheets database and trigger an instant email to <span className="text-cyan-300 font-mono">{profileData.email}</span> via Google Apps Script.
+                  Submissions are dynamically inserted into a Google Sheets database and trigger an instant notification to <span className="text-cyan-300 font-mono">{profileData.email}</span>.
                 </p>
-                {onStandaloneClick && (
-                  <button
-                    onClick={onStandaloneClick}
-                    className="inline-flex items-center gap-1.5 text-xs text-cyan-400 hover:text-cyan-300 font-mono pt-1 hover:underline"
-                  >
-                    <FileCode className="w-3.5 h-3.5" />
-                    <span>Inspect Google Apps Script (Code.gs) & Guide</span>
-                  </button>
-                )}
+                <div className="flex flex-col sm:flex-row items-start sm:items-center gap-2 pt-1">
+                  {onOpenGoogleSheetsDb && (
+                    <button
+                      type="button"
+                      onClick={onOpenGoogleSheetsDb}
+                      className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-emerald-900/60 hover:bg-emerald-800 border border-emerald-600/50 text-xs text-emerald-200 font-mono transition-colors"
+                    >
+                      <FileSpreadsheet className="w-3.5 h-3.5 text-emerald-400" />
+                      <span>Inspect Live Database</span>
+                    </button>
+                  )}
+                  {onStandaloneClick && (
+                    <button
+                      type="button"
+                      onClick={onStandaloneClick}
+                      className="inline-flex items-center gap-1.5 text-xs text-cyan-400 hover:text-cyan-300 font-mono hover:underline"
+                    >
+                      <FileCode className="w-3.5 h-3.5" />
+                      <span>Google Apps Script & Guide</span>
+                    </button>
+                  )}
+                </div>
               </div>
 
             </div>

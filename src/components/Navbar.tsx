@@ -9,7 +9,8 @@ import {
   Linkedin, 
   Terminal,
   ExternalLink,
-  Database
+  Database,
+  FileSpreadsheet
 } from 'lucide-react';
 import { profileData } from '../data/portfolioData';
 
@@ -17,12 +18,14 @@ interface NavbarProps {
   onResumeClick: () => void;
   onTerminalToggle: () => void;
   onStandaloneClick?: () => void;
+  onGoogleSheetsClick?: () => void;
 }
 
 export const Navbar: React.FC<NavbarProps> = ({ 
   onResumeClick, 
   onTerminalToggle,
-  onStandaloneClick 
+  onStandaloneClick,
+  onGoogleSheetsClick 
 }) => {
   const [scrolled, setScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -142,14 +145,26 @@ export const Navbar: React.FC<NavbarProps> = ({
 
         {/* Right CTA / Action Buttons */}
         <div className="hidden sm:flex items-center gap-2.5">
+          {onGoogleSheetsClick && (
+            <button
+              id="navbar-sheets-db-btn"
+              onClick={onGoogleSheetsClick}
+              className="flex items-center gap-1.5 px-3 py-2 text-xs font-mono text-emerald-300 hover:text-emerald-200 bg-emerald-950/60 hover:bg-emerald-900/80 border border-emerald-600/60 rounded-lg transition-all shadow-sm"
+              title="Inspect Live Google Sheets Database"
+            >
+              <FileSpreadsheet className="w-3.5 h-3.5 text-emerald-400" />
+              <span className="hidden xl:inline">Sheets DB</span>
+            </button>
+          )}
+
           {onStandaloneClick && (
             <button
               id="navbar-standalone-btn"
               onClick={onStandaloneClick}
-              className="flex items-center gap-1.5 px-3 py-2 text-xs font-mono text-emerald-300 hover:text-emerald-200 bg-emerald-950/40 hover:bg-emerald-900/60 border border-emerald-700/60 rounded-lg transition-all"
+              className="flex items-center gap-1.5 px-3 py-2 text-xs font-mono text-sky-300 hover:text-sky-200 bg-sky-950/40 hover:bg-sky-900/60 border border-sky-700/60 rounded-lg transition-all"
               title="View HTML, CSS, JS + Google Apps Script Backend"
             >
-              <Database className="w-3.5 h-3.5 text-emerald-400" />
+              <Database className="w-3.5 h-3.5 text-sky-400" />
               <span className="hidden xl:inline">HTML/CSS/JS</span>
             </button>
           )}
@@ -222,15 +237,27 @@ export const Navbar: React.FC<NavbarProps> = ({
           </div>
 
           <div className="pt-4 mt-3 border-t border-slate-800/80 flex flex-col gap-2">
+            {onGoogleSheetsClick && (
+              <button
+                onClick={() => {
+                  setMobileMenuOpen(false);
+                  onGoogleSheetsClick();
+                }}
+                className="w-full flex items-center justify-center gap-2 py-2.5 px-4 text-xs font-mono text-emerald-300 bg-emerald-950/60 border border-emerald-600/60 rounded-lg"
+              >
+                <FileSpreadsheet className="w-4 h-4 text-emerald-400" />
+                <span>Google Sheets DB Inspector</span>
+              </button>
+            )}
             {onStandaloneClick && (
               <button
                 onClick={() => {
                   setMobileMenuOpen(false);
                   onStandaloneClick();
                 }}
-                className="w-full flex items-center justify-center gap-2 py-2.5 px-4 text-xs font-mono text-emerald-300 bg-emerald-950/40 border border-emerald-700/60 rounded-lg"
+                className="w-full flex items-center justify-center gap-2 py-2.5 px-4 text-xs font-mono text-sky-300 bg-sky-950/40 border border-sky-700/60 rounded-lg"
               >
-                <Database className="w-4 h-4 text-emerald-400" />
+                <Database className="w-4 h-4 text-sky-400" />
                 <span>HTML/CSS/JS + Sheets DB</span>
               </button>
             )}

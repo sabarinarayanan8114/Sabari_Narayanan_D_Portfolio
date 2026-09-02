@@ -13,6 +13,7 @@ import { InteractiveTerminal } from './components/InteractiveTerminal';
 import { ProjectModal } from './components/ProjectModal';
 import { ResumeModal } from './components/ResumeModal';
 import { StandaloneExportModal } from './components/StandaloneExportModal';
+import { GoogleSheetsModal } from './components/GoogleSheetsModal';
 import { Toast } from './components/Toast';
 import { CustomCursor } from './components/CustomCursor';
 import { Project } from './types';
@@ -21,6 +22,7 @@ export default function App() {
   const [isResumeOpen, setIsResumeOpen] = useState(false);
   const [isTerminalOpen, setIsTerminalOpen] = useState(false);
   const [isStandaloneModalOpen, setIsStandaloneModalOpen] = useState(false);
+  const [isGoogleSheetsOpen, setIsGoogleSheetsOpen] = useState(false);
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
   const [toastMessage, setToastMessage] = useState<string | null>(null);
 
@@ -46,6 +48,7 @@ export default function App() {
         onResumeClick={() => setIsResumeOpen(true)}
         onTerminalToggle={() => setIsTerminalOpen(!isTerminalOpen)}
         onStandaloneClick={() => setIsStandaloneModalOpen(true)}
+        onGoogleSheetsClick={() => setIsGoogleSheetsOpen(true)}
       />
 
       {/* Main Content Layout */}
@@ -76,6 +79,7 @@ export default function App() {
         <ContactSection 
           onShowToast={showToast}
           onStandaloneClick={() => setIsStandaloneModalOpen(true)}
+          onOpenGoogleSheetsDb={() => setIsGoogleSheetsOpen(true)}
         />
       </main>
 
@@ -113,6 +117,13 @@ export default function App() {
       <StandaloneExportModal
         isOpen={isStandaloneModalOpen}
         onClose={() => setIsStandaloneModalOpen(false)}
+        onShowToast={showToast}
+      />
+
+      {/* Google Sheets Database Inspector Modal */}
+      <GoogleSheetsModal
+        isOpen={isGoogleSheetsOpen}
+        onClose={() => setIsGoogleSheetsOpen(false)}
         onShowToast={showToast}
       />
 

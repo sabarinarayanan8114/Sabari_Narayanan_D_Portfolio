@@ -124,7 +124,7 @@ const STANDALONE_JS_CODE = `/**
  */
 
 // Replace with your deployed Google Apps Script Web App URL
-let GOOGLE_APPS_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbz_sample_webhook/exec";
+let GOOGLE_APPS_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbxbFC34GBOlaujqXLBulcMHoLTwKBxYpYP5CbNl1GG3v6UnFkKeayv45Y7Va-7ATDeLRg/exec";
 
 document.addEventListener('DOMContentLoaded', () => {
   // Mobile navbar toggle

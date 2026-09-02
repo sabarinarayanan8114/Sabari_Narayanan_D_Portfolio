@@ -72,6 +72,7 @@ export const InteractiveTerminal: React.FC<InteractiveTerminalProps> = ({
               <div><span className="text-cyan-400">skills</span> - View technical skill stack</div>
               <div><span className="text-cyan-400">certs</span> - View certifications & IDs</div>
               <div><span className="text-cyan-400">education</span> - University & scores</div>
+              <div><span className="text-cyan-400">resume</span> - View light-mode resume summary</div>
               <div><span className="text-cyan-400">goto &lt;section&gt;</span> - Jump to section</div>
               <div><span className="text-cyan-400">contact</span> - Show email, phone & socials</div>
               <div><span className="text-cyan-400">clear</span> - Clear terminal logs</div>
@@ -196,6 +197,21 @@ export const InteractiveTerminal: React.FC<InteractiveTerminalProps> = ({
             <p className="text-slate-300">B.E. in Computer Science and Engineering (2023 - 2027) — <span className="text-emerald-400 font-bold">CGPA: 8.02/10</span></p>
             <p className="text-white font-semibold mt-2">Sri Lathangi Vidhya Mandir Higher Secondary School</p>
             <p className="text-slate-300">Higher Secondary Education (2021 - 2023) — <span className="text-emerald-400 font-bold">80% Distinction</span></p>
+          </div>
+        );
+        break;
+
+      case 'resume':
+      case 'cat resume.txt':
+      case 'cat resume':
+        outputNode = (
+          <div className="space-y-1.5 text-xs font-mono bg-slate-900/90 p-2.5 rounded border border-slate-800">
+            <p className="text-emerald-400 font-bold">📄 SABARI NARAYANAN D — Resume Summary</p>
+            <p className="text-slate-300">🎓 B.E. Computer Science and Engineering (2023–2027) | CGPA: 8.02/10</p>
+            <p className="text-slate-300">💼 Full Stack Developer (MERN) @ VIRUZVERSE Solutions (Dec 2025)</p>
+            <p className="text-slate-300">🚀 Key Projects: Expense Tracker (JavaFX/Spring Boot/MySQL), Med Health (MERN)</p>
+            <p className="text-slate-300">📜 Certifications: HackerRank Java, NPTEL Big Data & Cloud Computing (Elite), NASSCOM</p>
+            <p className="text-cyan-300 text-[11px] mt-1">💡 Click 'View Resume' in the navbar or hero for the complete 2-page document in light mode!</p>
           </div>
         );
         break;

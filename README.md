@@ -10,12 +10,12 @@
 ![Status](https://img.shields.io/badge/Status-Production%20Ready-brightgreen?style=for-the-badge)
 
 <p align="center">
-  <b>A high-performance developer portfolio and software engineering showcase built for Sabari Narayanan D.</b>
+  <b>A high-performance, dark-themed developer portfolio and interactive software engineering showcase built for Sabari Narayanan D.</b>
   <br />
-  Featuring an interactive terminal, live Google Sheets real-time database integration, comprehensive project case studies, light-mode printable resume, and animated telemetry flows.
+  Featuring an interactive terminal, live Google Sheets real-time database integration, comprehensive project case studies, downloadable resume modal, and standalone exportable packages.
 </p>
 
-[**🌐 Live Portfolio**](https://ais-pre-wc2dgeiczeybbdcn2utktr-378888008933.asia-southeast1.run.app) • [**💼 LinkedIn Profile**](https://linkedin.com/in/sabari-narayanan-d-8114sj) • [**⚡ LeetCode Profile**](https://leetcode.com/SabariNarayanan2004) • [**🐙 GitHub**](https://github.com/sabarinarayanan8114)
+[**🌐 View Live Portfolio**](https://ais-pre-wc2dgeiczeybbdcn2utktr-378888008933.asia-southeast1.run.app) • [**💼 Connect on LinkedIn**](https://linkedin.com/in/sabari-narayanan-d-8114sj) • [**⚡ Solve with me on LeetCode**](https://leetcode.com/SabariNarayanan2004)
 
 </div>
 
@@ -24,37 +24,33 @@
 ## 👨‍💻 About Sabari Narayanan D
 
 - 🎓 **Education**: B.E. in Computer Science and Engineering (2023 – 2027) at **V.S.B College of Engineering Technical Campus** (CGPA: **8.02 / 10**)
-- 🏫 **Higher Secondary (H.S.C)**: Sri Lathangi Vidhya Mandir Higher Secondary School (Score: **80%**)
 - 📍 **Location**: Coimbatore, Tamil Nadu, India
 - 💡 **Specialization**: Full-Stack Web Development, Java & Spring Boot Systems, REST API Design, Relational & NoSQL Database Optimization
-- 🏆 **Smart India Hackathon**: Participant in **SIH 2025** (*Safety Voyage: Smart Travel & Passenger Safety System* — Ranked top 5 of 15 teams)
-- 🧠 **Problem Solving**: **150+ LeetCode problems solved** across Arrays, Strings, Recursion, and Dynamic Programming with 85%+ consistency
+- 🏆 **Smart India Hackathon**: Participant in **SIH 2025** (*Safety Voyage: Smart Travel & Passenger Safety System*)
+- 🧠 **Problem Solving**: **150+ LeetCode problems solved** with 85%+ submission consistency
 
 ---
 
 ## ✨ Key Portfolio Features
 
-### 1. 📊 Live Google Sheets Database & Webhook Integration
-- **Serverless Relational Storage**: Contact inquiries, recruiter messages, and collaboration requests are appended in real-time to a live **Google Sheets** database (`[ Timestamp, Name, Email, Subject, Message, Status ]`).
-- **Instant Email Alerts**: Powered by a **Google Apps Script Webhook** that dispatches instant email notifications directly to `dsabari2408@gmail.com` on submission.
-- **In-App Database Inspector**: Built-in interactive modal allowing real-time searching, message filtering, status management (`NEW` → `RESPONDED` → `ARCHIVED`), and CSV exports.
+### 1. 📊 Live Google Sheets Database & Notification Webhook
+- **Zero-Maintenance Relational Database**: Contact inquiries, recruiter messages, and collaboration requests are dynamically appended as structured rows into a live **Google Sheets** spreadsheet (`[ Timestamp, Name, Email, Subject, Message, Status ]`).
+- **Instant Email Alerts**: Powered by an integrated **Google Apps Script Webhook** that dispatches instant email notifications directly to `dsabari2408@gmail.com` on every submission.
+- **In-App Database Inspector**: An interactive **"Sheets DB"** modal built into the UI allowing real-time searching, status updates (`NEW` → `RESPONDED` → `ARCHIVED`), and CSV exports.
 
-### 2. 📄 Light-Mode Printable Resume Modal
-- **Clean 2-Page Layout**: Professional, recruitment-grade light-mode document formatted with deep navy typography (`#1e3a8a`), structured skills matrices, and academic timelines.
-- **Multi-Format Downloads**: One-click download as **Microsoft Word (.doc)**, **Plain Text (.txt)**, or browser-native **Print / PDF**.
-- **Instant Clipboard Copy**: Fast copy of plain text resume content for easy pasting.
+### 2. 💻 Interactive Developer Terminal
+- Full Linux/Unix terminal simulation accessible via hotkey (`Ctrl + ~` / `` ` ``) or navbar toggle.
+- Supports commands: `help`, `about`, `skills`, `projects`, `stats`, `experience`, `education`, `certs`, `contact`, `hire`, `cat resume.txt`, `theme`, `clear`, and `exit`.
 
-### 3. 💼 Animated Professional Experience & Architecture
-- **Interactive System Architecture Flow**: Visualizes client-to-database telemetry across React 18, Node/Express JWT authentication layers, core service modules, and MongoDB document storage.
-- **Simulated Real-Time Workload Metrics**: 1,000+ daily transactions processed, 5,000+ user records secured, and 40% defect reduction through structured code reviews.
+### 3. 📂 Detailed Project Case Studies & Modals
+- Rich project view modals highlighting architecture decisions, metrics, technical challenges, and live production links.
+- Interactive category filtering (Full-Stack, Web Applications, Java & Systems, Hackathons).
 
-### 4. 🎓 Academic Background & Community Leadership
-- **Interactive Grade Gauges**: Visual performance bars showcasing university CGPA (8.02 / 10.0) and H.S.C distinction (80.0%).
-- **Campus Leadership Modules**: Detailed role breakdowns for **Communication Club Coordinator** (with an interactive Coding Circle simulator) and **Digital Team Member** (with a creative media showcase gallery).
+### 4. 📄 In-App Resume & PDF Viewer
+- Modal with instant tab toggling between formatted digital resume and direct PDF download/print options.
 
-### 5. 💻 Interactive Developer Terminal
-- Embedded Unix-style CLI accessible via hotkey (`` ` `` / `Ctrl + ~`) or navbar toggle.
-- Supported commands: `help`, `about`, `skills`, `projects`, `stats`, `experience`, `education`, `certs`, `resume`, `contact`, `hire`, `clear`, and `exit`.
+### 5. 📦 Exportable Standalone HTML/CSS/JS Package
+- Complete standalone vanilla code bundle (`index.html`, `style.css`, `script.js`, `Code.gs`) that can be hosted on GitHub Pages, Netlify, or Vercel with zero Node dependencies.
 
 ---
 
@@ -62,43 +58,38 @@
 
 | Category | Technologies & Tools |
 | :--- | :--- |
-| **Languages** | Java (Core, OOP, Collections, Multithreading), JavaScript (ES6+), SQL, HTML5, CSS3 |
-| **Backend & Frameworks** | Spring Boot, JavaFX, Node.js, Express.js, REST API Design, Google Apps Script |
-| **Frontend** | React 18, Tailwind CSS, Lucide Icons, Motion (Framer Motion), Canvas Confetti |
-| **Databases** | MySQL, MongoDB (Mongoose), Google Sheets API v4 |
-| **Core CS & Tools** | Data Structures & Algorithms, OOP, DBMS, Git, GitHub, VS Code, Postman |
+| **Languages** | Java (Core, OOP, Collections), Python, JavaScript (ES6+), SQL, HTML5/CSS3 |
+| **Frontend** | React 18, Tailwind CSS, Lucide Icons, Canvas Confetti, Responsive Design |
+| **Backend & APIs** | Node.js, Express.js, Spring Boot, RESTful APIs, Google Apps Script |
+| **Databases** | Google Sheets API v4, MongoDB, MySQL, Firestore |
+| **Tools & Platforms** | Git, GitHub, Maven, Postman, Linux, Vercel, Render, Cloud Run |
 
 ---
 
 ## 🚀 Featured Projects
 
 ### 🏥 1. [Med Health — Hospital Management Platform](https://med-health-three.vercel.app)
+- **Role**: Full-Stack Developer
 - **Tech Stack**: React.js, Node.js, Express.js, MongoDB, REST APIs, Tailwind CSS
 - **Repo**: [github.com/sabarinarayanan8114/med-health](https://github.com/sabarinarayanan8114/med-health)
-- **Highlights**: Role-based access control for healthcare providers and patients, appointment scheduling, and persistent MongoDB record storage.
+- **Highlights**: Role-based access control for doctors and patients, real-time appointment booking, sub-100ms API response time, and comprehensive administrative analytics dashboard.
 
 ### 💰 2. [Expense Tracker — Financial Analytics Suite](https://expense-tracker-project-virid.vercel.app/)
+- **Role**: Backend & Systems Architect
 - **Tech Stack**: Java, Spring Boot, JavaFX, MySQL, REST APIs, Maven
 - **Repo**: [github.com/sabarinarayanan8114/Expense-Tracker](https://github.com/sabarinarayanan8114/Expense-Tracker)
-- **Highlights**: Desktop and REST backend tracking financial transactions, categorized summaries, and relational MySQL persistence.
+- **Highlights**: High-throughput Spring Boot REST micro-endpoints, relational MySQL persistence with complex query indexing, and budget ceiling alert automation.
 
 ### 🎓 3. [Alumni Referral Hub — Mentorship & Job Network](https://alumni-referral-hub.onrender.com)
-- **Tech Stack**: React.js, Node.js, Express.js, MongoDB, Cloud Services
+- **Role**: Full-Stack Lead
+- **Tech Stack**: React.js, Node.js, Express.js, MongoDB, Cloud Services, REST APIs
 - **Repo**: [github.com/sabarinarayanan8114/alumni-referral-hub](https://github.com/sabarinarayanan8114/alumni-referral-hub)
-- **Highlights**: Career network bridging engineering undergraduates with verified alumni across tier-1 tech companies for referrals.
+- **Highlights**: Bridge platform connecting engineering undergraduates with verified alumni across top tier tech companies for direct referrals and mock interview mentorship.
 
 ### 🛡️ 4. Safety Voyage — SIH 2025 Smart Travel System
-- **Tech Stack**: IoT Telemetry, Cloud Computing, Geofencing, REST APIs
-- **Highlights**: Smart India Hackathon (SIH 2025) college-level top 5 finalist project for passenger transit tracking and SOS escalation.
-
----
-
-## 📜 Certifications & Credentials
-
-- **HackerRank Certified – Java (Basic)** — July 2025 *(Credential ID: `000EA037EB1A`)*
-- **Big Data Computing – NPTEL Elite Certification** — November 2025 *(Credential ID: `NPTEL25CS131S1266300568`)*
-- **Cloud Computing – NPTEL Elite Certification** — April 2026 *(Credential ID: `NPTEL26CS55S1063300735`)*
-- **Introduction to Cloud Computing – NASSCOM** — June 2026
+- **Role**: Lead Systems & Python Engineer
+- **Tech Stack**: Python, IoT Telemetry, Cloud Computing, Geofencing, REST APIs
+- **Highlights**: Smart India Hackathon (SIH 2025) participant project featuring real-time passenger safety monitoring, transit geofencing alerts, and automated SOS escalation.
 
 ---
 
@@ -106,39 +97,106 @@
 
 ```text
 ├── public/
-│   ├── standalone/               # Exportable standalone HTML/CSS/JS bundle
+│   ├── standalone/               # Ready-to-deploy vanilla HTML/CSS/JS + Apps Script
 │   │   ├── index.html
 │   │   ├── style.css
 │   │   ├── script.js
-│   │   └── Code.gs               # Google Apps Script Webhook handler
+│   │   └── Code.gs
 │   └── passport_photo.jpeg
 ├── src/
-│   ├── assets/                   # High-resolution assets
+│   ├── assets/                   # High-res banners & portraits
 │   ├── components/
-│   │   ├── Navbar.tsx            # Navigation bar with terminal & Sheets DB buttons
-│   │   ├── Hero.tsx              # Interactive profile hero with stats
-│   │   ├── AboutSection.tsx      # Engineering journey & biography
-│   │   ├── SkillsSection.tsx     # Interactive physics canvas & skills matrix
+│   │   ├── Navbar.tsx            # Sticky navigation bar with DB & terminal buttons
+│   │   ├── Hero.tsx              # Hero profile intro with quick stats
+│   │   ├── AboutSection.tsx      # Engineering background & bio
+│   │   ├── SkillsSection.tsx     # Animated skills grid & proficiency bars
 │   │   ├── ProjectsSection.tsx   # Project catalog with category filters
 │   │   ├── ProjectModal.tsx      # In-depth architectural case study modal
-│   │   ├── ExperienceSection.tsx # Work history & animated telemetry architecture
-│   │   ├── EducationTimeline.tsx # Academic timeline & leadership showcase
-│   │   ├── CertificationsAchievements.tsx # NPTEL, HackerRank, and LeetCode stats
-│   │   ├── ContactSection.tsx    # Live contact form with Google Sheets integration
+│   │   ├── ExperienceSection.tsx # Hackathon & developer experience
+│   │   ├── EducationTimeline.tsx # Academic journey at VSB College of Engg
+│   │   ├── CertificationsAchievements.tsx # NPTEL, HackerRank, NASSCOM
+│   │   ├── ContactSection.tsx    # Live contact form connected to Sheets DB
 │   │   ├── GoogleSheetsModal.tsx # Interactive Google Sheets Database Inspector
-│   │   ├── InteractiveTerminal.tsx # Draggable Unix CLI terminal
-│   │   ├── ResumeModal.tsx       # Light-mode printable resume & PDF viewer
-│   │   ├── StandaloneExportModal.tsx # Standalone project exporter
+│   │   ├── InteractiveTerminal.tsx # Draggable interactive CLI terminal
+│   │   ├── ResumeModal.tsx       # Interactive resume modal & PDF viewer
+│   │   ├── StandaloneExportModal.tsx # Standalone code exporter
 │   │   └── Footer.tsx            # Footer & social links
 │   ├── data/
-│   │   └── portfolioData.ts      # Central profile & project store
+│   │   └── portfolioData.ts      # Centralized profile & project data store
 │   ├── services/
 │   │   └── googleSheetsService.ts # Google Sheets REST API & Local cache service
 │   ├── types.ts                  # TypeScript definitions
-│   ├── App.tsx                   # Main layout component
-│   └── main.tsx                  # React DOM entry point
+│   ├── App.tsx                   # Main application layout
+│   └── main.tsx                  # React entry point
 ├── index.html
 ├── package.json
 ├── tsconfig.json
 ├── vite.config.ts
 └── README.md
+```
+
+---
+
+## ⚡ Getting Started Locally
+
+### Prerequisites
+- Node.js (v18.0 or higher)
+- npm or yarn
+
+### Installation & Run
+
+1. **Clone the repository**:
+   ```bash
+   git clone https://github.com/sabarinarayanan8114/portfolio.git
+   cd portfolio
+   ```
+
+2. **Install dependencies**:
+   ```bash
+   npm install
+   ```
+
+3. **Start the development server**:
+   ```bash
+   npm run dev
+   ```
+   Open your browser at `http://localhost:3000` (or the port specified in your terminal).
+
+4. **Build for production**:
+   ```bash
+   npm run build
+   ```
+
+---
+
+## 📊 Google Sheets Database Configuration
+
+The contact form is connected to a dedicated **Google Apps Script Webhook** that automatically appends all messages to your Google Sheet and sends an email alert.
+
+### Webhook Endpoint:
+```
+https://script.google.com/macros/s/AKfycbxbFC34GBOlaujqXLBulcMHoLTwKBxYpYP5CbNl1GG3v6UnFkKeayv45Y7Va-7ATDeLRg/exec
+```
+
+### Quick Setup for Your Own Sheet:
+1. Create a new Google Sheet at [sheets.new](https://sheets.new).
+2. Navigate to **Extensions** &rarr; **Apps Script**.
+3. Paste the contents of [`public/standalone/Code.gs`](public/standalone/Code.gs).
+4. Click **Deploy** &rarr; **New deployment** &rarr; select **Web app** (`Execute as: Me`, `Who has access: Anyone`).
+5. Copy the generated Web App URL and paste it into the contact section's custom webhook URL!
+
+---
+
+## 📬 Contact & Social Links
+
+- **Email**: [dsabari2408@gmail.com](mailto:dsabari2408@gmail.com)
+- **Phone**: [+91-9952887360](tel:+919952887360)
+- **LinkedIn**: [linkedin.com/in/sabari-narayanan-d-8114sj](https://linkedin.com/in/sabari-narayanan-d-8114sj)
+- **GitHub**: [github.com/sabarinarayanan8114](https://github.com/sabarinarayanan8114)
+- **LeetCode**: [leetcode.com/SabariNarayanan2004](https://leetcode.com/SabariNarayanan2004)
+
+---
+
+<div align="center">
+  <sub>Crafted with ❤️ by Sabari Narayanan D • © 2026 All Rights Reserved</sub>
+</div>
